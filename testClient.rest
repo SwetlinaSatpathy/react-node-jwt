@@ -1,0 +1,41 @@
+GET http://localhost:3000/users
+
+###
+
+POST http://localhost:4000/users 
+Content-Type: application/json
+
+{
+"name": "swetlina", "password": "myPass"
+}
+
+###
+
+GET http://localhost:3000/codeRepos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic3dldGxpbmEiLCJpYXQiOjE1Nzk5NzM1MTgsImV4cCI6MTU3OTk3MzcxOH0.FBqI-91Hn6xchUrUlI5Z8zpyyNoUoAZV4z5dLMpOLw8
+###
+
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmltIiwiaWF0IjoxNTY4NzU5OTIyfQ.RT6wszuCeFLwC_6ksmNMIELxiC5s-uRivfRxyZof5ag"
+}
+
+###
+
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1Nzk5Njk0OTgsImV4cCI6MTU3OTk2OTY5OH0.k5bT68FNTATI6BvDt5ZyLIvXrHlTZZjUjCKpl-xRSKo"
+  }
+
+###
+
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "username": "swetlina" , "password": "myPass"
+}
